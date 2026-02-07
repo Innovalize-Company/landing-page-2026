@@ -2,25 +2,25 @@
 
 const content = {
   en: {
-    quote: "From concept to deployment, we build complete digital solutions that bring your vision to life.",
+    quote: "The web is full of beautiful sites that don't sell. Ours are designed to be your best salesperson.",
     features: [
-      "Responsive Design",
-      "SEO Optimized",
-      "Fast Loading",
-      "Secure Hosting",
-      "24/7 Support",
-      "Modern Stack",
+      "1 Year Hosting Included",
+      "Free Domain Registration",
+      "Mobile First Design",
+      "Sales Copywriting",
+      "24/7 Monitoring",
+      "WhatsApp Integration",
     ],
   },
   es: {
-    quote: "Desde el concepto hasta el despliegue, construimos soluciones digitales completas que dan vida a tu visión.",
+    quote: "La web está llena de sitios bonitos que no venden. Los nuestros están diseñados para ser tu mejor vendedor.",
     features: [
-      "Diseño Responsive",
-      "Optimizado SEO",
-      "Carga Rápida",
-      "Hosting Seguro",
-      "Soporte 24/7",
-      "Stack Moderno",
+      "1 Año Hosting Incluido",
+      "Dominio Gratis .com",
+      "Diseño Mobile First",
+      "Copywriting de Ventas",
+      "Monitoreo 24/7",
+      "Integración WhatsApp",
     ],
   },
 }
@@ -52,7 +52,7 @@ export function Features({ lang }: FeaturesProps) {
               {t.features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-card border border-border rounded-xl p-4 hover:border-primary/50 transition-colors"
+                  className="bg-card border border-border rounded-xl p-4 hover:border-primary/50 transition-colors shadow-sm"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-primary" />

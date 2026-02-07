@@ -1,15 +1,14 @@
 "use client"
 
-import { 
-  Code2, 
-  RefreshCw, 
-  Server, 
-  Search, 
-  Palette, 
-  Video, 
+import {
+  Code2,
+  Megaphone,
+  Search,
+  Palette,
+  Video,
   Share2,
-  Wrench,
-  ArrowRight
+  Gauge,
+  Smartphone
 } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -17,100 +16,100 @@ const servicesData = {
   en: [
     {
       icon: Code2,
-      title: "Web Development",
-      description: "Crafting responsive, modern websites from scratch. We bring your ideas to life with clean code and stunning design.",
+      title: "Strategic Web Design",
+      description: "Not just pretty sites. We build sales funnels optimized for conversion and speed.",
       highlight: true,
     },
     {
-      icon: RefreshCw,
-      title: "Site Optimization",
-      description: "Revitalize your outdated website. We update deprecated code, improve performance, and modernize your digital presence.",
-      highlight: false,
-    },
-    {
-      icon: Server,
-      title: "Hosting & Domain",
-      description: "Complete hosting solutions with domain registration. We handle the technical side so you can focus on your business.",
-      highlight: false,
+      icon: Megaphone,
+      title: "Google & Meta Ads",
+      description: "Placement in front of customers searching for you. Immediate results with high ROI campaigns.",
+      highlight: true,
     },
     {
       icon: Search,
-      title: "SEO Optimization",
-      description: "Boost your visibility on search engines. Strategic optimization to help your customers find you online.",
-      highlight: true,
-    },
-    {
-      icon: Palette,
-      title: "Branding & Logo Design",
-      description: "Create a memorable brand identity. Logo design, color palette, and visual guidelines that represent your business.",
+      title: "Advanced SEO",
+      description: "Dominate search results. We structure your site so Google falls in love with your content.",
       highlight: false,
     },
     {
       icon: Share2,
-      title: "Community Management",
-      description: "Professional social media management. Content strategy, posting schedules, and engagement to grow your audience.",
+      title: "Social Media 360",
+      description: "We manage your community and create content that engages and builds trust.",
       highlight: false,
     },
     {
       icon: Video,
       title: "Video Production",
-      description: "High-quality video editing and production for all platforms. From reels to promotional content.",
-      highlight: true,
+      description: "Reels and TikToks that go viral. Professional editing to showcase your business essence.",
+      highlight: false,
     },
     {
-      icon: Wrench,
-      title: "Maintenance Service",
-      description: "Ongoing website maintenance and support. Keep your site secure, updated, and running smoothly.",
+      icon: Smartphone,
+      title: "Mobile First",
+      description: "100% responsive designs ensuring perfect experience on all devices.",
+      highlight: false,
+    },
+    {
+      icon: Gauge,
+      title: "Speed Optimization",
+      description: "Loading times under 1 second to prevent customer bounce and improve ranking.",
+      highlight: false,
+    },
+    {
+      icon: Palette,
+      title: "Digital Branding",
+      description: "Coherent visual identity that conveys professionalism and authority in your niche.",
       highlight: false,
     },
   ],
   es: [
     {
       icon: Code2,
-      title: "Desarrollo Web",
-      description: "Creamos sitios web responsivos y modernos desde cero. Llevamos tus ideas a la realidad con código limpio y diseño impactante.",
+      title: "Diseño Web Estratégico",
+      description: "No solo sitios bonitos. Construimos embudos de venta optimizados para conversión y velocidad.",
       highlight: true,
     },
     {
-      icon: RefreshCw,
-      title: "Optimización de Sitios",
-      description: "Revitalizamos tu sitio web obsoleto. Actualizamos código deprecado, mejoramos el rendimiento y modernizamos tu presencia digital.",
-      highlight: false,
-    },
-    {
-      icon: Server,
-      title: "Hosting y Dominio",
-      description: "Soluciones completas de alojamiento con registro de dominio. Nos encargamos de lo técnico para que te enfoques en tu negocio.",
-      highlight: false,
+      icon: Megaphone,
+      title: "Google & Meta Ads",
+      description: "Aparece frente a clientes que te buscan. Resultados inmediatos con campañas de alto ROI.",
+      highlight: true,
     },
     {
       icon: Search,
-      title: "Optimización SEO",
-      description: "Aumenta tu visibilidad en buscadores. Optimización estratégica para que tus clientes te encuentren en línea.",
-      highlight: true,
-    },
-    {
-      icon: Palette,
-      title: "Branding y Logo",
-      description: "Crea una identidad de marca memorable. Diseño de logo, paleta de colores y guías visuales que representen tu negocio.",
+      title: "SEO Avanzado",
+      description: "Domina los resultados de búsqueda. Estructuramos tu sitio para que Google se enamore de tu contenido.",
       highlight: false,
     },
     {
       icon: Share2,
-      title: "Community Management",
-      description: "Gestión profesional de redes sociales. Estrategia de contenido, calendarios y engagement para crecer tu audiencia.",
+      title: "Social Media 360",
+      description: "Gestionamos tu comunidad y creamos contenido que engancha y genera confianza.",
       highlight: false,
     },
     {
       icon: Video,
       title: "Producción de Video",
-      description: "Edición y producción de video de alta calidad para todas las plataformas. Desde reels hasta contenido promocional.",
-      highlight: true,
+      description: "Reels y TikToks que viralizan. Edición profesional para mostrar la esencia de tu negocio.",
+      highlight: false,
     },
     {
-      icon: Wrench,
-      title: "Servicio de Mantenimiento",
-      description: "Mantenimiento y soporte continuo de tu sitio web. Mantén tu sitio seguro, actualizado y funcionando sin problemas.",
+      icon: Smartphone,
+      title: "Mobile First",
+      description: "Diseños 100% responsivos asegurando una experiencia perfecta en todos los dispositivos.",
+      highlight: false,
+    },
+    {
+      icon: Gauge,
+      title: "Optimización de Velocidad",
+      description: "Tiempos de carga bajo 1 segundo para evitar rebote de clientes y mejorar ranking.",
+      highlight: false,
+    },
+    {
+      icon: Palette,
+      title: "Branding Digital",
+      description: "Identidad visual coherente que transmite profesionalismo y autoridad en tu nicho.",
       highlight: false,
     },
   ],
@@ -118,14 +117,14 @@ const servicesData = {
 
 const sectionContent = {
   en: {
-    subtitle: "What we do",
-    title: "Complete digital solutions",
-    description: "From web development to social media management, we offer everything you need to establish and grow your online presence.",
+    subtitle: "Our Ecosystem",
+    title: "Everything to scale your business",
+    description: "We combine technology, design, and marketing to create a growth engine for your company.",
   },
   es: {
-    subtitle: "Lo que hacemos",
-    title: "Soluciones digitales completas",
-    description: "Desde desarrollo web hasta gestión de redes sociales, ofrecemos todo lo que necesitas para establecer y hacer crecer tu presencia en línea.",
+    subtitle: "Nuestro Ecosistema",
+    title: "Todo para escalar tu negocio",
+    description: "Combinamos tecnología, diseño y marketing para crear un motor de crecimiento para tu empresa.",
   },
 }
 
@@ -138,7 +137,7 @@ export function Services({ lang }: ServicesProps) {
   const t = sectionContent[lang]
 
   return (
-    <section id="services" className="py-24 relative">
+    <section id="services" className="py-24 relative bg-muted/30">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
@@ -156,18 +155,16 @@ export function Services({ lang }: ServicesProps) {
           {services.map((service, index) => {
             const Icon = service.icon
             return (
-              <Card 
+              <Card
                 key={index}
-                className={`group cursor-pointer transition-all duration-300 hover:border-primary/50 ${
-                  service.highlight ? 'bg-primary/5 border-primary/20' : 'bg-card'
-                }`}
+                className={`group cursor-pointer transition-all duration-300 hover:border-primary/50 hover:shadow-lg ${service.highlight ? 'bg-background border-primary/20 shadow-sm' : 'bg-card/50'
+                  }`}
               >
                 <CardHeader>
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${
-                    service.highlight 
-                      ? 'bg-primary text-primary-foreground' 
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${service.highlight
+                      ? 'bg-primary text-primary-foreground'
                       : 'bg-muted group-hover:bg-primary group-hover:text-primary-foreground'
-                  }`}>
+                    }`}>
                     <Icon className="w-6 h-6" />
                   </div>
                   <CardTitle className="text-lg">{service.title}</CardTitle>
@@ -176,10 +173,6 @@ export function Services({ lang }: ServicesProps) {
                   <CardDescription className="text-sm leading-relaxed">
                     {service.description}
                   </CardDescription>
-                  {/*<div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                    {lang === "en" ? "Learn more" : "Saber más"}
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </div>*/}
                 </CardContent>
               </Card>
             )

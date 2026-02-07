@@ -11,6 +11,7 @@ import { About } from "@/components/about"
 import { CTASection } from "@/components/cta-section"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { Pricing } from "@/components/pricing"
 
 export default function Home() {
   const [lang, setLang] = useState<"en" | "es">("en")
@@ -22,6 +23,7 @@ export default function Home() {
       <Services lang={lang} />
       {/*<Projects lang={lang} />*/}
       <Features lang={lang} />
+      <Pricing lang={lang} />
       <KeyboardSection lang={lang} />
       <About lang={lang} />
       <CTASection lang={lang} />

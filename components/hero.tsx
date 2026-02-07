@@ -1,25 +1,28 @@
 "use client"
 
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState, useRef } from "react"
+import { BookingModal } from "@/components/booking-modal"
 
 const content = {
   en: {
-    tag: "Digital Agency",
-    headline: "We digitalize your business.",
-    description: "From concept to deployment, we build complete digital solutions that bring your vision to life. Web development, SEO, branding, and more.",
-    cta: "Book a meeting",
-    secondary: "View our work",
+    tag: "Digital Growth Agency",
+    headline: "Your business needs to sell, not just 'be' online.",
+    description: "Results-driven web design + High-impact advertising. We build digital ecosystems that turn visitors into paying customers from day one.",
+    cta: "View Plans & Pricing",
+    schedule: "Schedule Meeting",
+    secondary: "Let's talk",
   },
   es: {
-    tag: "Agencia Digital",
-    headline: "Digitalizamos tu negocio.",
-    description: "Desde el concepto hasta el despliegue, construimos soluciones digitales completas que dan vida a tu visión. Desarrollo web, SEO, branding y más.",
-    cta: "Agendar reunión",
-    secondary: "Ver proyectos",
+    tag: "Agencia de Crecimiento Digital",
+    headline: "Tu negocio necesita vender, no solo 'estar' en internet.",
+    description: "Diseño web estratégico + Publicidad de alto impacto. Creamos ecosistemas digitales que convierten visitas en clientes desde el primer día.",
+    cta: "Ver Planes y Precios",
+    schedule: "Agendar Reunión",
+    secondary: "Hablemos",
   },
 }
 
@@ -31,6 +34,7 @@ export function Hero({ lang }: HeroProps) {
   const t = content[lang]
   const [scrollY, setScrollY] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isBookingOpen, setIsBookingOpen] = useState(false)
   const heroRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -49,7 +53,7 @@ export function Hero({ lang }: HeroProps) {
 
     window.addEventListener("scroll", handleScroll, { passive: true })
     window.addEventListener("mousemove", handleMouseMove, { passive: true })
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("mousemove", handleMouseMove)
@@ -63,7 +67,7 @@ export function Hero({ lang }: HeroProps) {
   return (
     <section ref={heroRef} className="relative min-h-[120vh] flex items-center justify-center overflow-hidden">
       {/* Parallax Background Image */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           transform: `translateY(${parallaxOffset}px) scale(${imageScale})`,
@@ -84,7 +88,7 @@ export function Hero({ lang }: HeroProps) {
       </div>
 
       {/* Animated Glow Effects with Mouse Tracking */}
-      <div 
+      <div
         className="absolute inset-0 z-[1] pointer-events-none overflow-hidden"
         style={{
           transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`,
@@ -113,7 +117,7 @@ export function Hero({ lang }: HeroProps) {
       </div>
 
       {/* Grid Pattern */}
-      <div 
+      <div
         className="absolute inset-0 z-[2] opacity-[0.04]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), 
@@ -124,7 +128,7 @@ export function Hero({ lang }: HeroProps) {
       />
 
       {/* Main Content */}
-      <div 
+      <div
         className="relative z-10 max-w-7xl mx-auto px-6 text-center pt-32"
         style={{
           opacity: contentOpacity,
@@ -150,13 +154,27 @@ export function Hero({ lang }: HeroProps) {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
           <Button size="lg" asChild className="group relative overflow-hidden">
-            <Link href="#contact">
+            <Link href="#pricing">
               <span className="relative z-10">{t.cta}</span>
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="group cursor-pointer"
+            onClick={() => setIsBookingOpen(true)}
+          >
+            <Calendar className="mr-2 w-4 h-4 text-primary group-hover:text-foreground transition-colors" />
+            <span>{t.schedule}</span>
+          </Button>
         </div>
+
+        <BookingModal
+          isOpen={isBookingOpen}
+          onClose={() => setIsBookingOpen(false)}
+        />
 
         {/* Scroll Indicator */}
         <div className="mt-24 flex flex-col items-center gap-2 animate-bounce">

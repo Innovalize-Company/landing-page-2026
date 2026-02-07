@@ -176,10 +176,10 @@ export function Services({ lang }: ServicesProps) {
                   <CardDescription className="text-sm leading-relaxed">
                     {service.description}
                   </CardDescription>
-                  <div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                  {/*<div className="mt-4 flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                     {lang === "en" ? "Learn more" : "Saber más"}
                     <ArrowRight className="w-4 h-4 ml-1" />
-                  </div>
+                  </div>*/}
                 </CardContent>
               </Card>
             )

@@ -20,7 +20,7 @@ const content = {
         title: "Company",
         links: [
           { label: "About Us", href: "#about" },
-          { label: "Projects", href: "#projects" },
+          /*{ label: "Projects", href: "#projects" },*/
           { label: "Contact", href: "#contact" },
         ],
       },
@@ -43,7 +43,7 @@ const content = {
         title: "Empresa",
         links: [
           { label: "Nosotros", href: "#about" },
-          { label: "Proyectos", href: "#projects" },
+          /*{ label: "Proyectos", href: "#projects" },*/
           { label: "Contacto", href: "#contact" },
         ],
       },

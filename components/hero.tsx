@@ -148,17 +148,12 @@ export function Hero({ lang }: HeroProps) {
           {t.description}
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
           <Button size="lg" asChild className="group relative overflow-hidden">
             <Link href="#contact">
               <span className="relative z-10">{t.cta}</span>
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Link>
-          </Button>
-          <Button size="lg" variant="outline" asChild className="backdrop-blur-sm border-foreground/20 hover:border-primary/50 hover:bg-primary/10 bg-transparent">
-            <Link href="#projects">
-              {t.secondary}
             </Link>
           </Button>
         </div>

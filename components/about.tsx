@@ -57,7 +57,7 @@ interface AboutProps {
 
 export function About({ lang }: AboutProps) {
   const t = content[lang]
-  console.log(t);
+
   return (
     <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
